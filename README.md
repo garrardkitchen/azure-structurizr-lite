@@ -13,7 +13,7 @@ Benefits:
 - Holistic view to help onboard new starters
 - Themes to provide additional cloud provider context
 - Notation to enrich abstractions and their relationships
-- Export (from in-app or from CLI) to mermain, draw.io, PlantUML and other alternatives
+- Export (from in-app or from CLI) to mermaid, draw.io, PlantUML and other alternatives
 - Build into DevOps pipeline
 - SDKs to dynamically create models to reflect current state of your software system
 - Inherency; Workspace extension - _The Structurizr DSL provides a way to extend an existing workspace, enabling you to reuse common elements/relationships across multiple workspaces._
