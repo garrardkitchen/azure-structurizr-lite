@@ -18,19 +18,37 @@ Benefits:
 - SDKs to dynamically create models to reflect current state of your software system
 - Inherency; Workspace extension - _The Structurizr DSL provides a way to extend an existing workspace, enabling you to reuse common elements/relationships across multiple workspaces._
 
+---
+
 # Prerequisite
 
 - Azure Powershell modules
 - Powershell 7+
 - bicep
 
+---
+
 # Getting started
 
-Run:
+## How to deploy
+
+**Step 1** - Log onto Azure
+
+```powershell
+Connect-AzAccount
+```
+
+**Step 2** - Deploy infra and upload sample model dsl
 
 ```powershell
 ./deploy.ps1 -resourceGrooup "<resource-group>" -storageAccountName "<globally-unique-storage-account>" -appServiceName "<globally-unique-app-service>"
 ```
+
+**Step 3** - Navigate to App Service and click `Default domain` link on it's `Overview` blade.
+
+---
+
+## How to apply new changes to your dsl model
 
 To upload changes to your model dsl:
 
@@ -38,6 +56,9 @@ To upload changes to your model dsl:
 $uploadstorage = Get-AzStorageAccount -ResourceGroupName "<resource-group>" -Name "<globally-unique-storage-account>"
 Set-AzStorageFileContent -ShareName "demo" -Source "structurizr/workspace.dsl" -Path "workspace.dsl" -Context $uploadstorage.Context -Force
 ```
+
+---
+
 # ToDos
 
 - Add VNET to restrict access to dsl model on Fileshare from Private Endpoint
