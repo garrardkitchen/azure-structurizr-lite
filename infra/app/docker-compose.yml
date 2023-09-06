@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+    web:
+        image: structurizr/lite
+        container_name: structurizr
+        restart: always
+        ports:
+            - "80:8080"
+        volumes:
+            - demo:/usr/local/structurizr
