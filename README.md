@@ -2,7 +2,7 @@
 
 This is not production ready so do not use to model sensitive software systems.
 
-[deploy.ps1](deploy.ps1) creates a RG and deploys a Web App for Container App Service, it's App Service Plan and a Storage Account.  The multi-container deploys [structurizr](www.c4model.com).  A sample model dsl is uploaded to a `demo` fileshare in the Storage Account.
+[deploy.ps1](deploy.ps1) creates a RG and deploys a Web App for Container App Service, it's App Service Plan and a Storage Account.  The multi-container deploys [structurizr](https://www.c4model.com).  A sample model dsl is uploaded to a `demo` fileshare in the Storage Account.
 
 The C4 model is a set of hierarchical abstractions (software systems, containers, components, and code).
 
