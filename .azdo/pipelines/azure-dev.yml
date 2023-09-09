@@ -30,6 +30,8 @@ steps:
       scriptType: filePath
       scriptPath: $(Agent.BuildDirectory)/deploy.ps1
       scriptArguments: 
-        -resourceGroup: ${{variables.resourceGroup}} `
-        -storageAccountName: ${{variables.storageAccountName}} `
-        -appServiceName: ${{variables.appServiceName}}
+        -resourceGroup ${{variables.resourceGroup}} `
+        -storageAccountName ${{variables.storageAccountName}} `
+        -appServiceName ${{variables.appServiceName}}
+      azurePowerShellVersion: latestVersion
+      pwsh: true
