@@ -31,5 +31,5 @@ steps:
       ScriptPath: $(Agent.BuildDirectory)/deploy.ps1
       ScriptArguments: 
       - resourceGroup: ${{variables.resourceGroup}}
-      - storageAccountName: ${{variables.storageAccountName}
-      - appServiceName: ${{variables.appServiceName}
+      - storageAccountName: ${{variables.storageAccountName}}
+      - appServiceName: ${{variables.appServiceName}}
