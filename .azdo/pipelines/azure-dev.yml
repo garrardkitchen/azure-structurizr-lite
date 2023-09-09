@@ -21,7 +21,7 @@ variables:
   appServiceName: 'web${{parameters.globallyUniqueName}}'
 
 steps:
-  - checkout: true
+  - checkout: self
 
   - task: AzurePowerShell@5
     displayName: 'Deploy resources'
