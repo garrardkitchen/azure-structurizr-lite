@@ -1,0 +1,35 @@
+# Run when commits are pushed to mainline branch (main or master)
+# Set this to the mainline branch you are using
+trigger: none 
+  
+# Azure Pipelines workflow to deploy to Azure using azd
+# To configure required secrets for connecting to Azure, simply run `azd pipeline config --provider azdo`
+
+pool:
+  vmImage: ubuntu-latest
+
+parameters:
+- name: globallyUniqueName
+  dilayName: Enter a globally unique name
+  type: string
+  default: structurizr
+    
+variables:
+- subscription: 'subscription'
+- resourceGroup: 'rg-${{parameters.globallyUniqueName}}'
+- storageAccountName: 'sa${{lower(parameters.globallyUniqueName)}}'
+- appServiceName: 'web${{parameters.globallyUniqueName}}'
+
+steps:
+  - checkout: true
+
+  - task: AzurePowerShell@5
+    displayName: 'Deploy resources'
+    inputs:
+      azureSubscription: $(subscription)
+      ScriptType: FilePath
+      ScriptPath: $(Agent.BuildDirectory)/deploy.ps1
+      ScriptArguments: 
+      - resourceGroup: ${{variables.resourceGroup}}
+      - storageAccountName: ${{variables.storageAccountName}
+      - appServiceName: ${{variables.appServiceName}
