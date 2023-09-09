@@ -27,9 +27,9 @@ steps:
     displayName: 'Deploy resources'
     inputs:
       azureSubscription: $(subscription)
-      ScriptType: FilePath
-      ScriptPath: $(Agent.BuildDirectory)/deploy.ps1
-      ScriptArguments: 
-      - resourceGroup: ${{variables.resourceGroup}}
-      - storageAccountName: ${{variables.storageAccountName}}
-      - appServiceName: ${{variables.appServiceName}}
+      scriptType: filePath
+      scriptPath: $(Agent.BuildDirectory)/deploy.ps1
+      scriptArguments: 
+        -resourceGroup: ${{variables.resourceGroup}} `
+        -storageAccountName: ${{variables.storageAccountName}} `
+        -appServiceName: ${{variables.appServiceName}}
