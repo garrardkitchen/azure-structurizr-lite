@@ -15,10 +15,10 @@ parameters:
   default: structurizr
     
 variables:
-- subscription: 'subscription'
-- resourceGroup: 'rg-${{parameters.globallyUniqueName}}'
-- storageAccountName: 'sa${{lower(parameters.globallyUniqueName)}}'
-- appServiceName: 'web${{parameters.globallyUniqueName}}'
+  subscription: 'subscription'
+  resourceGroup: 'rg-${{parameters.globallyUniqueName}}'
+  storageAccountName: 'sa${{lower(parameters.globallyUniqueName)}}'
+  appServiceName: 'web${{parameters.globallyUniqueName}}'
 
 steps:
   - checkout: true
@@ -26,8 +26,8 @@ steps:
   - task: AzurePowerShell@5
     displayName: 'Deploy resources'
     inputs:
-      azureSubscription: $(subscription)
-      scriptType: filePath
+      azureSubscription: ${{variables.subscription}}
+      scriptType: FilePath
       scriptPath: $(Agent.BuildDirectory)/deploy.ps1
       scriptArguments: 
         -resourceGroup ${{variables.resourceGroup}} `
