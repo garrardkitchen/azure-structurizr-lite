@@ -30,7 +30,7 @@ Benefits:
 
 # Getting started
 
-## How to deploy
+## Deploy via the command line
 
 **Step 1** - Log onto Azure
 
@@ -59,7 +59,7 @@ Set-AzStorageFileContent -ShareName "demo" -Source "structurizr/workspace.dsl" -
 
 ---
 
-# Deploy via an ADO Pipeline
+## Deploy via an ADO Pipeline
 
 **Step 1** - Create a new Project in ADO
 
