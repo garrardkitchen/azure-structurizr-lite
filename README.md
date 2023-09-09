@@ -59,9 +59,22 @@ Set-AzStorageFileContent -ShareName "demo" -Source "structurizr/workspace.dsl" -
 
 ---
 
+# Deploy via an ADO Pipeline
+
+**Step 1** - Create a new Project in ADO
+
+**Step 2** - Add Azure Resource Manager Service Connection named `subscription` and select your subscription
+
+**Step 3** - Add existing pipeline [.azdo/pipelines/azure-dev-yml](.azdo/pipelines/azure-dev-yml)
+
+**Step 4** - Run pipeline and enter global unique name (both storage account and web app need to be globally unique)
+
+---
+
 # ToDos
 
-- Add VNET to restrict access to dsl model on Fileshare from Private Endpoint
-- Restrict access to App Service from within VNET
-- Add VM from where you can access the App Service
-- Add Bastion to access VM from
+- [x] Added ADO Pipeline
+- [ ] Add VNET to restrict access to dsl model on Fileshare from Private Endpoint
+- [ ] Restrict access to App Service from within VNET
+- [ ] Add VM from where you can access the App Service
+- [ ] Add Bastion to access VM from
