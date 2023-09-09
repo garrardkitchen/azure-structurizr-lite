@@ -65,7 +65,7 @@ Set-AzStorageFileContent -ShareName "demo" -Source "structurizr/workspace.dsl" -
 
 **Step 2** - Add Azure Resource Manager Service Connection named `subscription` and select your subscription
 
-**Step 3** - Add existing pipeline [.azdo/pipelines/azure-dev-yml](.azdo/pipelines/azure-dev-yml)
+**Step 3** - Add existing pipeline [.azdo/pipelines/azure-dev.yml](.azdo/pipelines/azure-dev.yml)
 
 **Step 4** - Run pipeline and enter global unique name (both storage account and web app need to be globally unique)
 
