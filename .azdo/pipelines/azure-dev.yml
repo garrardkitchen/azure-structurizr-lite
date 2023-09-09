@@ -28,7 +28,7 @@ steps:
     inputs:
       azureSubscription: ${{variables.subscription}}
       scriptType: FilePath
-      scriptPath: $(Agent.BuildDirectory)/deploy.ps1
+      scriptPath: $(build.sourcesDirectory)/deploy.ps1
       scriptArguments: 
         -resourceGroup ${{variables.resourceGroup}} `
         -storageAccountName ${{variables.storageAccountName}} `
