@@ -10,7 +10,7 @@ pool:
 
 parameters:
 - name: globallyUniqueName
-  dilayName: Enter a globally unique name
+  dislayName: Enter a globally unique name
   type: string
   default: structurizr
     
