@@ -26,7 +26,7 @@ Benefits:
 - **Context** - The big picture with the focus on Actors, Roles, Personas and the like as well as software systems instead of technology, protocols and low-level details
 - **Container** - Web application, desktop application, mobile app, database, file systems and the like. Essentially, a container is anything that can host code or data
 - **Component** - Major logical components and their interactions. This is all about partitioning the functionality implemented by the software system into a number of distinct components, services, subsystems, layers, workflows and the like.  A component diagram shows how a container is divided into components, what each of those components are, their responsibilities and the technology and implementation details
-- **Class** - This level is optional.  Includes UML describing specific component implementation details
+- **Code** - This level is optional.  Includes UML describing specific component implementation details
 ---
 
 # Prerequisite
