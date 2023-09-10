@@ -18,6 +18,15 @@ Benefits:
 - SDKs to dynamically create models to reflect current state of your software system
 - Inherency; Workspace extension - _The Structurizr DSL provides a way to extend an existing workspace, enabling you to reuse common elements/relationships across multiple workspaces._
 
+
+---
+
+**The 4 Cs**
+
+- **Context** - The big picture with the focus on Actors, Roles, Personas and the like as well as software systems instead of technology, protocols and low-level details
+- **Container** - Web application, desktop application, mobile app, database, file systems and the like. Essentially, a container is anything that can host code or data
+- **Component** - Major logical components and their interactions. This is all about partitioning the functionality implemented by the software system into a number of distinct components, services, subsystems, layers, workflows and the like.  A component diagram shows how a container is divided into components, what each of those components are, their responsibilities and the technology and implementation details
+- **Class** - This level is optional.  Includes UML describing specific component implementation details
 ---
 
 # Prerequisite
